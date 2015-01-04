@@ -8,7 +8,7 @@
   "author": "AT&T Developer Program, DRT/LTA",
   "private": true,
 
-  "dhs_https_host": "10.211.55.2",
+  "dhs_https_host": "localhost",
   "dhs_https_port" : 10011,
 
   "sample_http_port": 9000,

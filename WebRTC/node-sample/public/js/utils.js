@@ -422,9 +422,22 @@ function onWarning(data) {
   }
 }
 
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function onSessionReady(data) {
   ATT.utils.extend(sessionData, data);
-  switchView('home', sessionData);
+
+  var isdog = getParameterByName('dog');
+
+  if (isdog)
+    switchView('dog', sessionData);
+  else
+    switchView('owner', sessionData);
 }
 
 function onNotification(data) {
@@ -872,4 +885,3 @@ function cleanupNumber() {
 
   setMessage(phone.formatNumber(cleanNumber));
 }
-
