@@ -1,13 +1,17 @@
 $(function() {
   $('body').on("click", "#treat", function() {
-    alert("send a treat!");
+    $.get("http://10.10.18.119/")
+    return false;
   });
   $('body').on("click", "#calldog", function() {
 
-    dialCall('14254425101', 'video',  document.getElementById('localVideo'), document.getElementById('remoteVideo'));
+    dialCall('bark@cotoblue.com', 'video',  document.getElementById('localVideo'), document.getElementById('remoteVideo'));
+
+    return false;
 
   });
   $('body').on("click", "#whistle", function() {
     alert("Kaman API for playing Whistle!");
+    return false;
   });
 });

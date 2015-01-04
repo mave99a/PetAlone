@@ -1,9 +1,44 @@
+<style>
+#message {display:none;}
+#app-header {display:none;}
+#dog{
+  width:100px;
+  height:100px;
+}
+
+.btn {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  border: 2px solid #aaa;
+}
+
+.btn img{
+  height: 50px;
+}
+
+
+
+</style>
 <div class="col-sm-12 jumbotron jumbotron-video clearfix">
-    <h1>Owner</h1>
-    <button id="treat">treat</button>
-    <button id="calldog">Call Dog</button>
-    <button id="whistle">Dog Whistle</button>
-    <div id="address-box" style="display:none">
+    <div class="text-center">
+    <h3>Bark is home alone.</h3>
+    <img class="img-circle" id="dog" src="/assets/bark.png"/>
+    <br/><br/>
+    <a class="btn" id="calldog" href="#"><img src="/assets/whistle.png"/></a>
+    <a class="btn" id="treat" href="#"><img src="/assets/treat.png"/></a>
+    <br/>
+    <br/>
+    <a href="https://m2x.att.com/devices/b10958b404d938db94ffa72550131dd2" target="_blank">Temprature</a> |
+    <a href="https://m2x.att.com/devices/b10958b404d938db94ffa72550131dd2" target="_blank">Humidity</a>
+    <br/>
+    <br/>
+  </div>
+
+  <div id="address-box" style="display:none">
         <div class="col-sm-6 col-sm-offset-3 jumbotron">
 
             <h2>Address</h2>
@@ -39,7 +74,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group hidden">
 
         <div class="row">
             <div class="btn-group">
